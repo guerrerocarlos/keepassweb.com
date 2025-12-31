@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html dir="ltr" lang="es">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -10,8 +9,11 @@
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔑</text></svg>">
 
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Remember just a single password and encrypt all others">
-  <meta name="description" content="The last password you'll ever remember FOR FREE, ALWAYS">
+  <link rel="canonical" href="https://keepassweb.com/">
+  <meta name="title" content="KeePassWeb — Remember one password, encrypt all others">
+  <meta name="description" content="KeePassWeb is a free, privacy-first password tool. Encrypt/decrypt text locally with your password and optional WebAuthn (Yubikey/Fingerprint). No data leaves your browser.">
+  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="password manager, encrypt text, webauthn, yubikey, fingerprint, AES, offline, privacy, free">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -23,9 +25,9 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://keepassweb.com/">
-  <meta property="twitter:title" content="Remember just a single password and encrypt all others">
-  <meta property="twitter:description" content="The last password you'll ever remember FOR FREE, ALWAYS">
-  <meta property="twitter:image" content="">
+  <meta property="twitter:title" content="KeePassWeb — Free offline encryption">
+  <meta property="twitter:description" content="Encrypt and decrypt text locally. Optional WebAuthn 2FA. No cloud, no tracking.">
+  <meta property="twitter:image" content="/img/keepassweb.jpg">
 
   <meta name="google" content="notranslate">
 
@@ -33,6 +35,18 @@
 <script src="./cbor.js" type="text/javascript"></script>
 <script src="./webauthn.js" type="text/javascript"></script>
 <link rel="stylesheet" href="./styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "KeePassWeb",
+  "url": "https://keepassweb.com/",
+  "description": "Free, offline, privacy-first encryption. Encrypt/decrypt locally with password and optional WebAuthn (Yubikey/Fingerprint).",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0"}
+}
+</script>
 
 <body>
   <div class="outer">
@@ -67,18 +81,18 @@
       </table>
       <div id="errorMessage"></div>
     </div>
-    <div class="row inner_remaining childrenFullHeight col-100">
+    <div class="row inner_remaining childrenFullHeight">
       <div class="col-6 col-s-6 col-s-50 col-100 main-padding">
-        <textarea class="inputMax" type="text" id="plaintext" placeholder="Plain text"></textarea>
+        <textarea class="inputMax" id="plaintext" placeholder="Plain text"></textarea>
       </div>
       <div class="col-6 col-s-6 col-s-50 col-100">
-        <textarea class="inputMax" type="text" id="encrypted" placeholder="Encrypted text" value=""
-          spellcheck="false"></textarea></textarea>
+        <textarea class="inputMax" id="encrypted" placeholder="Encrypted text" value=""
+          spellcheck="false"></textarea>
       </div>
     </div>
   </div>
   <div id="body-blackout" class="body-blackout hide-modal"></div>
-  <div id="popup-modal" , class="popup-modal shadow hide-modal">
+  <div id="popup-modal" class="popup-modal shadow hide-modal">
     <h1>
       KeePassWeb ☁️
     </h1>
