@@ -21,8 +21,8 @@ function stringToArrayBuffer(str) {
 
 async function register(authAttach, challenge) {
   console.log("▶️ Register", authAttach)
-  // if (localStorage.getItem('yubikeyCredentialId')) {
-  //   return stringToArrayBuffer(localStorage.getItem('yubikeyCredentialId'))
+  // if (localStorage.getItem('passkeyCredentialId')) {
+  //   return stringToArrayBuffer(localStorage.getItem('passkeyCredentialId'))
   // }
 
   const publicKeyCredentialCreationOptions = {
@@ -116,8 +116,8 @@ async function register(authAttach, challenge) {
 
 async function login(credentialId, challenge) {
 
-  // if (localStorage.getItem('yubikeyLoggedCredentialId')) {
-  //   return { id: localStorage.getItem('yubikeyLoggedCredentialId') }
+  // if (localStorage.getItem('passkeyLoggedCredentialId')) {
+  //   return { id: localStorage.getItem('passkeyLoggedCredentialId') }
   // }
 
   const publicKeyCredentialRequestOptions = {

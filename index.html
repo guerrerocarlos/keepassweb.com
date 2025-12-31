@@ -11,9 +11,9 @@
   <!-- Primary Meta Tags -->
   <link rel="canonical" href="https://keepassweb.com/">
   <meta name="title" content="KeePassWeb — Remember one password, encrypt all others">
-  <meta name="description" content="KeePassWeb is a free, privacy-first password tool. Encrypt/decrypt text locally with your password and optional WebAuthn (Yubikey/Fingerprint). No data leaves your browser.">
+  <meta name="description" content="KeePassWeb is a free, privacy-first password tool. Encrypt/decrypt text locally with your password and optional Passkeys (Face/Touch ID or security keys). No data leaves your browser.">
   <meta name="robots" content="index,follow">
-  <meta name="keywords" content="password manager, encrypt text, webauthn, yubikey, fingerprint, AES, offline, privacy, free">
+  <meta name="keywords" content="password manager, encrypt text, webauthn, passkey, passkeys, fingerprint, security key, FIDO2, AES, offline, privacy, free">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -41,7 +41,7 @@
   "@type": "WebApplication",
   "name": "KeePassWeb",
   "url": "https://keepassweb.com/",
-  "description": "Free, offline, privacy-first encryption. Encrypt/decrypt locally with password and optional WebAuthn (Yubikey/Fingerprint).",
+  "description": "Free, offline, privacy-first encryption. Encrypt/decrypt locally with password and optional Passkeys (Face/Touch ID or security keys).",
   "applicationCategory": "SecurityApplication",
   "operatingSystem": "Web",
   "offers": {"@type": "Offer", "price": "0"}
@@ -71,10 +71,10 @@
           </tr>
           <tr>
             <td>
-              <button id="yubikeyButton" class="button2fa">Yubikey</button>
+              <button id="yubikeyButton" class="button2fa">Passkey</button>
             </td>
             <td>
-              <input id="yubikeyInput" type="text" placeholder="Yubikey Key (optional)" disabled="true"></input>
+              <input id="yubikeyInput" type="text" placeholder="Passkey (optional)" disabled="true"></input>
             </td>
           </tr>
         </tbody>
@@ -99,9 +99,8 @@
     <p>Stop trusting third parties with your passwords and private keys.</p>
     <p>
       Encrypt all your passwords with only one password and (optionally)
-      a <i>Second Factor Authentication</i> (2FA) method (like a <a href="https://www.yubico.com/">Yubikey</a> or your
-      laptop's Fingerprint reader) to ensure
-      that nodody can decrypt it except you.
+      an optional <i>Passkey</i> (Face/Touch ID or a security key) to ensure
+      that nobody can decrypt it except you.
     </p>
 
     <p>
@@ -109,7 +108,7 @@
     </p>
     <ul>
       <li>
-        <a href="https://webauthn.io/">WebAuthn.io</a>: Yubikey and Fingerprint support <a
+        <a href="https://webauthn.io/">WebAuthn.io</a>: Passkeys (platform and cross-platform) support <a
           href="https://caniuse.com/webauthn">(browser compatibility)</a>
       </li>
       <li>
